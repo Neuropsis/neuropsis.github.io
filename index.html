@@ -39,12 +39,12 @@
 
     .nav-link.active {
       font-weight: bold;
-      text-decoration: underline;
+      border-bottom: 2px solid white;
     }
 
     .hero {
       background-image: url('assets/images/neuropsis_backgrnd_cajal2.jpg');
-      background-size: 50%;
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       color: black;
@@ -52,7 +52,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-height: 280px;
+      min-height: 250px;
       padding: 2rem 1rem;
       position: relative;
     }
@@ -64,13 +64,21 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.3);
       z-index: 0;
     }
 
     .hero .container {
       position: relative;
       z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
     }
 
     .card {
