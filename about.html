@@ -8,24 +8,59 @@
   <style>
     body {
       padding-top: 4rem;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
     }
+
+    .navbar {
+      background-color: #000000 !important;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .nav-link,
+    .navbar .btn {
+      color: white !important;
+    }
+
+    .nav-link.active {
+      font-weight: bold;
+      border-bottom: 2px solid white;
+    }
+
     .about-section {
-      padding: 4rem 0;
+      padding: 4rem 1rem;
     }
+
+    .about-section h1 {
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
     footer {
       margin-top: 4rem;
       padding: 2rem 0;
       text-align: center;
       background: #f1f1f1;
     }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Neuropsis</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/Neuropsis_logo1.png" class="avatar" alt="Avatar" />
+        <strong>Neuropsis</strong>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,7 +73,7 @@
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
+          <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -47,15 +82,15 @@
   <!-- About Content -->
   <section class="about-section">
     <div class="container">
-      <h1 class="mb-4">About Neuropsis</h1>
+      <h1>About Neuropsis</h1>
       <p class="lead">
-        Neuropsis is a digital space curated by physicians and neuroscientists to make clinical neuroimaging, translational neuroscience, and neuromodulation accessible to a wider audience. This site bridges medicine and research through educational content, case reviews, and integrated tools.
+        Neuropsis is a resource grounded in fundamental neuroscience and built to serve both research and clinical communities. We begin with the principles of neurobiology, physiology, and biophysics—how signals emerge in individual neurons, and more importantly, how meaningful output arises only through networks and connectivity.
       </p>
       <p>
-        We believe that medical knowledge—especially in the neurosciences—should be clear, visual, and practically useful. Our posts draw from current research, imaging cases, and hands-on clinical experience. Whether you're a student, clinician, or researcher, Neuropsis is built to support your curiosity and critical thinking.
+        Our approach moves from bench to bedside. We evaluate the very tools we use to infer brain function—from cell signalling and synaptic transmission to invasive and non-invasive methods like EEG, EMG, MEG, PET, DTI, DWI, SWI, and brain stimulation (TMS, DBS, tES). We incorporate pharmacological and genetic modulators such as BDNF and APOE, and explore how behaviour, perception, and cognition can be meaningfully measured.
       </p>
       <p>
-        Content includes fMRI, EEG, TMS, and emerging neurotechnologies. Each article is written with a focus on clarity, context, and clinical or experimental relevance.
+        While clinical neurology often rests on a localist view—stroke here, deficit there—basic research reminds us that the brain rarely operates in isolation. This site embraces that tension and pushes toward a more integrated model, driven by connectionist thinking. Our goal is to make this science practical for diagnosis, clinical decision-making, and advancing the next generation of neurotechnology.
       </p>
     </div>
   </section>
