@@ -42,8 +42,14 @@
     .papaya {
       width: 100%;
       max-width: 100%;
-      height: 80vh; /* Dynamic height: 80% of the viewport height */
+      height: 80vh;
       margin: auto;
+    }
+
+    .instructions {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      color: #ccc;
     }
 
     footer {
@@ -67,6 +73,7 @@
       "https://neuropsis.github.io/assets/papaya/sample_image.nii.gz",
       "https://neuropsis.github.io/assets/papaya/Talairach_labels_1mm.nii.gz"
     ];
+    params["Talairach_labels_1mm.nii.gz"] = { "hidden": true };
   </script>
 </head>
 
@@ -95,8 +102,13 @@
   <!-- Viewer Section -->
   <section class="viewer-section">
     <div class="container">
-      <h1 class="mb-4">MRI Viewer</h1>
-      <p class="lead text-light">Load and explore NIfTI images with integrated label overlays in-browser.</p>
+      <h1 class="mb-3">MRI Viewer</h1>
+      <p class="lead text-light">View NIfTI images with anatomical label feedback. Hover to see brain regions.</p>
+      <div class="instructions">
+        <strong>To load your own image:</strong><br />
+        Go to <em>File → Close All</em>, then <em>File → Add Image</em><br />
+        Or simply drag and drop your <code>.nii</code> or <code>.nii.gz</code> file into the viewer.
+      </div>
       <div class="papaya" data-params="params"></div>
     </div>
   </section>
