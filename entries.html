@@ -8,21 +8,63 @@
   <style>
     body {
       padding-top: 4rem;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
     }
+
+    .navbar {
+      background-color: #000000 !important;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .nav-link,
+    .navbar .btn {
+      color: white !important;
+    }
+
+    .nav-link.active {
+      font-weight: bold;
+      border-bottom: 2px solid white;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
     footer {
       margin-top: 4rem;
       padding: 2rem 0;
       text-align: center;
       background: #f1f1f1;
     }
+
+    .card-title {
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background-color: #000000;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #333333;
+    }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Neuropsis</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/Neuropsis_logo1.png" class="avatar" alt="Avatar" />
+        <strong>Neuropsis</strong>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,7 +77,7 @@
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
+          <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -48,7 +90,7 @@
     <div class="row g-4">
       <!-- Post 1 -->
       <div class="col-md-4">
-        <div class="card h-100">
+        <div class="card h-100 shadow-sm">
           <img src="assets/images/1.jpg" class="card-img-top" alt="BOLD fMRI">
           <div class="card-body">
             <h5 class="card-title">Understanding BOLD fMRI</h5>
@@ -60,7 +102,7 @@
 
       <!-- Post 2 -->
       <div class="col-md-4">
-        <div class="card h-100">
+        <div class="card h-100 shadow-sm">
           <img src="assets/images/2.jpg" class="card-img-top" alt="Occipital Stroke">
           <div class="card-body">
             <h5 class="card-title">Case: Occipital Lobe Stroke</h5>
@@ -72,7 +114,7 @@
 
       <!-- Post 3 -->
       <div class="col-md-4">
-        <div class="card h-100">
+        <div class="card h-100 shadow-sm">
           <img src="assets/images/3.jpg" class="card-img-top" alt="Future of TMS">
           <div class="card-body">
             <h5 class="card-title">The Future of TMS</h5>
