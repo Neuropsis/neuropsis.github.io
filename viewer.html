@@ -4,65 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MRI Viewer | Neuropsis</title>
-  <link rel="stylesheet" href="assets/papaya/papaya.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+  <!-- Papaya viewer -->
+  <link rel="stylesheet" href="https://neuropsis.github.io/assets/papaya/papaya.css" type="text/css" />
+  <script type="text/javascript" src="https://neuropsis.github.io/assets/papaya/papaya.js"></script>
+
   <style>
     body {
-      padding-top: 4.5rem;
-      background-color: #fff;
+      background-color: #000;
+      color: #fff;
+      padding-top: 4rem;
+    }
+    .viewer-section {
+      padding: 4rem 1rem;
+      text-align: center;
     }
     .navbar {
       background-color: #000 !important;
     }
-    .navbar-brand img {
-      height: 30px;
-      margin-right: 10px;
+    .navbar-brand, .nav-link, .navbar-toggler-icon {
+      color: #fff !important;
     }
-    #papayaContainer {
-      width: 100%;
+    .navbar-brand img {
+      margin-right: 0.5rem;
+    }
+    .papaya {
       height: 700px;
     }
     footer {
       margin-top: 4rem;
       padding: 2rem 0;
       text-align: center;
-      background: #f1f1f1;
+      background: #111;
+      color: #ccc;
     }
   </style>
+
+  <script type="text/javascript">
+    var params = [];
+    params["worldSpace"] = true;
+    params["images"] = [
+      "https://neuropsis.github.io/assets/papaya/sample_image.nii.gz",
+      "https://neuropsis.github.io/assets/papaya/Talairach_labels_1mm.nii.gz"
+    ];
+  </script>
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/images/Neuropsis_logo1.png" alt="Neuropsis Logo">
-        <span class="text-light">Neuropsis</span>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/avatar.png" alt="Avatar" width="30" height="30" class="rounded-circle" />
+        Neuropsis
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link text-light" href="categories.html">Categories</a></li>
-          <li class="nav-item"><a class="nav-link text-light" href="entries.html">Entries</a></li>
-          <li class="nav-item"><a class="nav-link text-light" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active text-light" href="viewer.html">MRI Viewer</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="entries.html">Entries</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="viewer.html">MRI Viewer</a></li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
 
   <!-- Viewer -->
-  <div class="container mt-5">
-    <h1 class="text-center mb-3">MRI Viewer</h1>
-    <p class="text-center lead">Upload a NIfTI or DICOM file to explore the brain interactively in your browser.</p>
-    <div id="papayaContainer" class="papaya" data-params="{}"></div>
-  </div>
+  <section class="viewer-section">
+    <div class="container">
+      <h1 class="mb-4">MRI Viewer</h1>
+      <p class="lead text-light">View NIfTI images and brain atlas overlays directly in the browser.</p>
+      <div class="papaya" data-params="params"></div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -71,8 +88,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="assets/papaya/papaya.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
