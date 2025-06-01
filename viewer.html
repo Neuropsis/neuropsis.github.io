@@ -30,25 +30,26 @@
       margin-top: 4rem;
       padding: 2rem 0;
       text-align: center;
-      background: #f1f1f1;
+      background: #f8f9fa;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light border-bottom">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Neuropsis</a>
+      <a class="navbar-brand fw-semibold" href="index.html">Neuropsis</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
           <li class="nav-item"><a class="nav-link" href="entries.html">Entries</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="viewer.html">MRI Viewer</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="viewer.html">MRI Viewer</a></li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -62,7 +63,7 @@
   <section class="viewer-section">
     <div class="container">
       <h1 class="mb-4">MRI Viewer</h1>
-      <p class="lead">Drag and drop your NIfTI or DICOM files to visualise them interactively in the browser. No upload or installation needed.</p>
+      <p class="lead">Drop your NIfTI or DICOM files below to visualise them directly in your browser. No upload required.</p>
       <div id="papaya-container" class="papaya"></div>
     </div>
   </section>
@@ -70,11 +71,11 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Neuropsis. All rights reserved.</p>
+      <p class="mb-0">&copy; 2025 Neuropsis. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Papaya Script Configuration and Load -->
+  <!-- Scripts -->
   <script type="text/javascript">
     var papayaContainers = [["papaya-container"]];
   </script>
