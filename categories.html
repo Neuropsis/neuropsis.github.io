@@ -5,12 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Categories | Neuropsis</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <style>
+    body {
+      padding-top: 4rem;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .navbar {
+      background-color: #000000 !important;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .nav-link,
+    .navbar .btn {
+      color: white !important;
+    }
+
+    .nav-link.active {
+      font-weight: bold;
+      border-bottom: 2px solid white;
+    }
+
+    .category-section {
+      padding: 4rem 1rem;
+    }
+
+    .list-group-item {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding: 2rem 0;
+      text-align: center;
+      background: #f1f1f1;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Neuropsis</a>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/Neuropsis_logo1.png" class="avatar" alt="Avatar" />
+        <strong>Neuropsis</strong>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,25 +72,37 @@
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
+          <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
 
-  <!-- Content -->
-  <main class="container" style="padding-top: 6rem;">
-    <h1 class="mb-4">Post Categories</h1>
+  <!-- Categories -->
+  <main class="container category-section">
+    <h1 class="mb-4">Categories</h1>
     <div class="list-group">
       <a href="#" class="list-group-item list-group-item-action">Functional MRI (fMRI)</a>
-      <a href="#" class="list-group-item list-group-item-action">Stroke Imaging</a>
-      <a href="#" class="list-group-item list-group-item-action">Neuromodulation</a>
+      <a href="#" class="list-group-item list-group-item-action">Structural MRI</a>
+      <a href="#" class="list-group-item list-group-item-action">Diffusion Imaging (DTI/DWI)</a>
+      <a href="#" class="list-group-item list-group-item-action">EEG & MEG</a>
+      <a href="#" class="list-group-item list-group-item-action">Stroke & Lesion Mapping</a>
+      <a href="#" class="list-group-item list-group-item-action">Invasive Neuromodulation (e.g. DBS)</a>
+      <a href="#" class="list-group-item list-group-item-action">Non-invasive Neuromodulation (TMS, tES)</a>
+      <a href="#" class="list-group-item list-group-item-action">Neurotransmitters & Synaptic Function</a>
+      <a href="#" class="list-group-item list-group-item-action">Genetic Modulators (e.g. BDNF, APOE)</a>
+      <a href="#" class="list-group-item list-group-item-action">Electromyography (EMG)</a>
+      <a href="#" class="list-group-item list-group-item-action">Behaviour, Sensation, and Perception</a>
+      <a href="#" class="list-group-item list-group-item-action">Epilepsy & Electrophysiology</a>
+      <a href="#" class="list-group-item list-group-item-action">Neuroanatomy & Circuitry</a>
+      <a href="#" class="list-group-item list-group-item-action">Neuropathology & Lesion Studies</a>
       <a href="#" class="list-group-item list-group-item-action">Case Reports</a>
-      <a href="#" class="list-group-item list-group-item-action">TMS & EEG</a>
+      <a href="#" class="list-group-item list-group-item-action">Biophysics & Neuronal Signalling</a>
     </div>
   </main>
 
-  <footer class="text-center mt-5 py-4 bg-light">
+  <!-- Footer -->
+  <footer>
     <div class="container">
       <p class="mb-0">&copy; 2025 Neuropsis. All rights reserved.</p>
     </div>
